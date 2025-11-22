@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Translator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Quick Translator</h1>
+        <p>Translate text between 20+ languages instantly.</p>
+      </header>
+
+      <section class="translator">
+        <div class="controls">
+          <label>
+            From
+            <select id="source-lang"></select>
+          </label>
+          <button id="swap-btn" type="button" title="Swap languages">
+            ⇄
+          </button>
+          <label>
+            To
+            <select id="target-lang"></select>
+          </label>
+        </div>
+
+        <div class="panes">
+          <label class="pane">
+            <span>Source text</span>
+            <textarea
+              id="source-text"
+              rows="6"
+              placeholder="Type or paste text to translate..."
+            ></textarea>
+          </label>
+          <label class="pane result">
+            <span>Translation</span>
+            <textarea id="result-text" rows="6" readonly></textarea>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="translate-btn" type="button">Translate</button>
+          <span id="status" role="status" aria-live="polite"></span>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
